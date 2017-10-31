@@ -1,0 +1,43 @@
+<!--{section loop=$data name="xs"}-->
+<div class="communication_ctn <!--{$data[xs].whos}-->"
+	
+	data-id="<!--{$data[xs].id}-->" 
+	data-sort="<!--{$data[xs].sort}-->" 
+	data-type="<!--{$data[xs].type}-->" 
+	data-entity="<!--{$data[xs].entityId}-->"
+	data-source="<!--{$data[xs].sourceId}-->"
+	data-object="<!--{$data[xs].objectId}-->"
+	data-point="<!--{$data[xs].pointId}-->"
+	data-location="<!--{$data[xs].locationId}-->"
+>
+				
+	<div class="communication_portrait <!--{$data[xs].float}-->"><img src="./images/db<!--{$data[xs].source}-->/portrait.jpg"></div>
+		
+	<div class="communication_entity <!--{$data[xs].float}-->">
+		
+		<div class="communication_row communication_info">
+			<div class="<!--{$data[xs].float}-->">
+				<span class="_left _bold little_btn communication_source whos" data-whos="<!--{$data[xs].source}-->"><!--{$data[xs].posterName}--></span>
+				<span class="_left"><!--{$data[xs].header}--></span>
+				<span class="_left _grey <!--{$data[xs].object_isset}-->" > 回复 </span>
+				<span class="_left little_btn whos <!--{$data[xs].object_isset}-->" data-whos="<!--{$data[xs].object}-->"><!--{$data[xs].objectName}--></span>
+				<span class="_left _grey little_btn timer" value="<!--{$data[xs].time}-->"><!--{$data[xs].time_show}--></span>
+			</div>
+				<span class="little_btn _c888 reply_who <!--{$data[xs].float}--> <!--{$data[xs].reply_isset}--> <!--{$data[xs].content_notset}-->" value="hide" 
+					data-point="<!--{$data[xs].id}-->" data-source="<!--{$data[xs].source}-->" data-name="<!--{$data[xs].posterName}-->" 
+				> 回复 </span>
+		</div>
+		
+		<div class="communication_row communication_content <!--{$data[xs].content_isset}-->">
+			<!--{$data[xs].content}-->
+			<span class="little_btn _c888 _right reply_who <!--{$data[xs].reply_isset}-->" value="hide" 
+				data-point="<!--{$data[xs].id}-->" data-source="<!--{$data[xs].source}-->" data-name="<!--{$data[xs].posterName}-->" 
+			> 回复 </span>
+		</div>
+		
+	</div>
+		
+</div>		
+<!--{/section}-->
+
+

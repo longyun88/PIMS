@@ -1,0 +1,9 @@
+@foreach($datas as $data)
+<div class="btn btn_switch select receiver receiver_toggle" data-selected="selected"
+	data-id="{{ $data['id'] or '' }}" 
+	data-name="{{ $data['name'] or '' }}" 
+>
+			<span class="receiver_portrait"><img src="./images/db{{ $data['id'] or '' }}/portrait.jpg"></span>
+			<span class="receiver_name">{{ $data['name'] or '' }}</span>
+</div>
+@endforeach

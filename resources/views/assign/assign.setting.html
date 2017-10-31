@@ -1,0 +1,332 @@
+<div class="set_header _none">我的名片</div>
+
+<div class="card _none">
+	
+	<div class="card_portrait"><img src="./images/db<!--{ $infos.id }-->/portrait.jpg?<!--{ $infos.random }-->"></div>
+	
+	<div class="card_row"><span><!--{ $infos.name }--></span></div>
+	<div class="card_row"><span><!--{ $infos.realname }--></span></div>
+	<div class="card_row <!--{ $infos.phone_isset }-->"><span><!--{ $infos.phone }--></span></div>
+	<div class="card_row <!--{ $infos.email_isset }-->"><span><!--{ $infos.email }--></span></div>
+	<div class="card_row <!--{ $infos.autograph_isset }-->"><span><!--{ $infos.autograph }--></span></div>
+	<div class="card_row <!--{ $infos.canpany_isset }-->">
+		<span><!--{ $infos.company }--> / <!--{ $infos.companyDepartment }--> / <!--{ $infos.companyPosition }--></span>
+	</div>
+	<div class="card_row <!--{ $infos.person_isset }--> <!--{ $infos.person.birth_isset }-->"><span><!--{ $infos.person.birth_show }--></span></div>
+	<div class="card_row <!--{ $infos.person_isset }--> <!--{ $infos.person.hometown_isset }-->"><span></span></div>
+	<div class="card_row <!--{ $infos.person_isset }--> <!--{ $infos.person.present_isset }-->"><span></span></div>
+	<div class="card_row <!--{ $infos.person_isset }--> <!--{ $infos.person.school_isset }-->"><span></span></div>
+	
+	<div class="card_num_row">
+		<span class="card_num" title="分享 <!--{ $infos.timer.shared }--> 条"> 时刻 <!--{ $infos.timer.shared }-->/<!--{ $infos.timer.total }--></span>
+		<span class="card_num" title="分享 <!--{ $infos.note.shared }--> 条"> 笔记 <!--{ $infos.note.shared }-->/<!--{ $infos.note.total }--></span>
+		<span class="card_num"> 求助 <!--{ $infos.ask.total }--></span>
+		<span class="card_num _none"> 朋友圈 <!--{ $infos.circle.total }--></span>
+		<span class="card_num"> 微博/朋友圈 <!--{ $infos.words.total }--></span>
+	</div>
+
+</div>
+
+<div class="set_header _none"></div>
+
+<div class="set_row" id="altContent">
+<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"
+WIDTH="650" HEIGHT="450" id="myMovieName">
+<PARAM NAME=movie VALUE="avatar.swf">
+<PARAM NAME=quality VALUE=high>
+<PARAM NAME=bgcolor VALUE=#FFFFFF>
+<param name="flashvars" value="imgUrl=./images/db<!--{ $infos.id }-->/portrait.jpg&uploadUrl=./upfile.php&uploadSrc=false" />
+<EMBED src="avatar.swf" quality=high bgcolor=#FFFFFF WIDTH="650" HEIGHT="450" wmode="transparent" flashVars="imgUrl=./images/db<!--{ $infos.id }-->/portrait.jpg?<!--{ $infos.random }-->&uploadUrl=./upfile.php&uploadSrc=false"
+NAME="myMovieName" ALIGN="" TYPE="application/x-shockwave-flash" allowScriptAccess="always"
+PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer">
+</EMBED>
+</OBJECT>
+</div>
+<div id="avatar_priview"></div>
+
+
+
+<div class="set_row set_password" data-info="<!--密码-->">
+	<span class="set_title"> 密码 </span>
+	<span class="set_entity"></span>
+	<span class="set_tool box_shower" data-parent=".set_password" data-shower=".set_hide"> 修改密码 </span>
+			
+	<div class="set_hide"><input type="password" placeholder="原密码" id="card_pre_password" /></div>
+	<div class="set_hide"><input type="password" placeholder="新密码" id="card_new_password" /></div>
+	<div class="set_hide"><input type="password" placeholder="确认密码" id="card_confirm_password" /></div>
+	<div class="set_hide">
+		<span class="set_info"></span>
+		<span class="set_tool set_confirmC set_password_confirm" data-type="password" data-parent=".set_password" data-mine="<!--{ $smarty.session.mine }-->"> 确认修改 </span>
+	</div>
+</div>
+
+<div class="set_row set_myid" data-info="<!--莲花ID-->">
+	<span class="set_title"> 用户ID </span>
+	<span class="set_entity"><!--{ $smarty.session.my_id }--></span>
+</div>
+
+<div class="set_row set_passname" data-info="<!--莲花ID-->">
+	<span class="set_title"> 莲花号 </span>
+	<span class="set_entity"><!--{ $infos.passname }--></span>
+	<span class="set_tool box_shower <!--{ $infos.passname_isset }-->" data-parent=".set_passname" data-shower=".set_hide"> 编辑 </span>
+			
+	<div class="set_hide"><input type="text" value="<!--{ $infos.passname }-->" placeholder="用户名" id="card_passname" /></div>
+	<div class="set_hide">
+		<span class="set_explain _left " data-type="passname" data-parent=".set_passname"> 字母+数字，首字符字母 </span>
+		<span class="set_tool set_confirmC set_confirm" data-type="passname" data-parent=".set_passname"> 确认修改 </span>
+	</div>
+</div>
+
+<div class="set_row set_username" data-info="<!--用户名-->">
+	<span class="set_title"> 昵称 </span>
+	<span class="set_entity"><!--{ $infos.name }--></span>
+	<span class="set_tool box_shower" data-parent=".set_username" data-shower=".set_hide"> 编辑 </span>
+			
+	<div class="set_hide"><input type="text" value="<!--{ $infos.name }-->" placeholder="用户名" id="card_username" /></div>
+	<div class="set_hide"><span class="set_tool set_confirmC set_confirm" data-type="username" data-parent=".set_username"> 确认修改 </span></div>
+</div>
+
+<div class="set_row set_realname" data-share="<!--{ $infos.realnameShared }-->" data-info="<!--真实姓名-->">
+	<span class="set_title"> 真实姓名 </span>
+	<span class="set_entity"><!--{ $infos.realname }--></span>
+	<span class="set_tool box_shower" data-parent=".set_realname" data-shower=".set_hide"> 编辑 </span>
+			
+	<div class="set_hide">
+		<input type="text" value="<!--{ $infos.realname }-->" placeholder="姓名" id="card_realname" />
+	</div>
+	<div class="set_hide">
+		<!--<span class="set_selector radio_selecter" data-parent=".set_realname" data-share="0" value="0">自己可见</span>
+		<span class="set_selector radio_selecter" data-parent=".set_realname" data-share="1" value="1">好友可见</span>
+		<span class="set_selector radio_selecter" data-parent=".set_realname" data-share="2" value="2">所有人可见</span>-->
+		<span class="set_tool set_confirmC set_confirm" data-type="realname" data-parent=".set_realname"> 确认修改 </span>
+	</div>
+</div>
+	
+<div class="set_row set_autograph" data-info="<!--签名-->">
+	<div class="set_title"> 签名 </div>
+	<div class="set_entity"><!--{ $infos.autograph }--></div>
+	<span class="set_tool box_shower" data-parent=".set_autograph" data-shower=".set_hide"> 编辑 </span>
+			
+	<div class="set_hide">
+			<input type="text" value="<!--{ $infos.autograph }-->" placeholder="签名" id="card_email" />
+		</div>
+	<div class="set_hide">
+		<span class="set_tool set_confirmC set_confirm" data-type="autograph" data-parent=".set_autograph"> 确认修改 </span>
+	</div>
+</div>
+
+<div class="set_row set_phone" data-share="<!--{ $infos.phoneShared }-->" data-info="<!--联系电话-->">
+	<div class="set_title"> 联系电话 </div>
+	<div class="set_entity"><!--{ $infos.phone }--></div>
+	<span class="set_tool box_shower set_edit" data-parent=".set_phone" data-shower=".set_hide">编辑</span>
+	<div class="set_state"><!--{ $infos.phoneState }--></div>
+	
+	<div class="set_hide">
+		<input type="text" value="<!--{ $infos.phone }-->" placeholder="手机号" id="card_phone" />
+	</div>
+	<div class="set_hide">
+		<span class="set_selector radio_selecter" data-parent=".set_phone" data-share="0">自己可见</span>
+		<span class="set_selector radio_selecter" data-parent=".set_phone" data-share="1">好友可见</span>
+		<span class="set_selector radio_selecter" data-parent=".set_phone" data-share="2">所有人可见</span>
+		<span class="set_tool set_confirmC set_confirm" data-type="phone" data-parent=".set_phone">确认修改</span>
+	</div>
+</div>
+	
+<div class="set_row set_email" data-share="<!--{ $infos.emailShared }-->" data-info="<!--邮箱-->">
+	<div class="set_title">邮箱</div>
+	<div class="set_entity"><!--{ $infos.email }--></div>
+	<span class="set_tool box_shower set_edit" data-parent=".set_email" data-shower=".set_hide">编辑</span>
+	<div class="set_state"><!--{ $infos.emailState }--></div>
+			
+	<div class="set_hide">
+		<input type="text" value="<!--{ $infos.email }-->" placeholder="邮箱" id="card_email" />
+	</div>
+	<div class="set_hide">
+		<span class="set_selector radio_selecter" data-parent=".set_email" data-share="0">自己可见</span>
+		<span class="set_selector radio_selecter" data-parent=".set_email" data-share="1">好友可见</span>
+		<span class="set_selector radio_selecter" data-parent=".set_email" data-share="2">所有人可见</span>
+		<span class="set_tool set_confirmC set_confirm" data-type="email" data-parent=".set_email">确认修改</span>
+	</div>
+</div>
+
+<div class="set_row set_location _none" data-info="<!--现居地-->">
+	<span class="set_title"> 所在地 </span>
+	<span class="set_entity"> 上海 - 虹口区 </span>
+	<span class="set_tool box_shower" data-parent=".set_present" data-shower=".set_hide"> 编辑 </span>
+			
+	<div class="set_hide">
+		<input type="text" value="" placeholder="现居地" id="card_present" />
+	</div>
+	<div class="set_hide">
+		<span class="set_selector radio_selecter" data-parent=".set_present" data-type="0"> 自己可见 </span>
+		<span class="set_selector radio_selecter" data-parent=".set_present" data-type="1"> 好友可见 </span>
+		<span class="set_selector radio_selecter" data-parent=".set_present" data-type="2"> 所有人可见 </span>
+		<span class="set_tool set_confirmC set_confirm"> 确认修改 </span>
+	</div>
+</div>
+
+<div class="set_row set_company" data-share="<!--{ $infos.companyShared }-->" data-info="<!--公司-->">
+	<span class="set_title"> 公司 </span>
+	<span class="set_entity"><!--{ $infos.company }--> - <!--{ $infos.companyDepartment }--> - <!--{ $infos.companyPositon }--></span>
+	<span class="set_tool box_shower set_edit" data-parent=".set_company" data-shower=".set_hide"> 编辑 </span>
+	<div class="set_state"><!--{ $infos.companyState }--></div>
+			
+	<div class="set_hide"><input type="text" class="input1" value="<!--{ $infos.company }-->" placeholder="公司" /></div>
+	<div class="set_hide"><input type="text" class="input2" value="<!--{ $infos.companyDepartment }-->" placeholder="部门" /></div>
+	<div class="set_hide"><input type="text" class="input3" value="<!--{ $infos.companyPosition }-->" placeholder="职位" /></div>
+	<div class="set_hide">
+		<span class="set_selector radio_selecter" data-parent=".set_company" data-share="0"> 自己可见 </span>
+		<span class="set_selector radio_selecter" data-parent=".set_company" data-share="1"> 好友可见 </span>
+		<span class="set_selector radio_selecter" data-parent=".set_company" data-share="2"> 所有人可见 </span>
+		<span class="set_tool set_confirmC set_confirm" data-type="company" data-parent=".set_company"> 确认修改 </span>
+	</div>
+</div>
+
+<div class="set_row set_birth <!--{ $infos.person_isset }-->" data-birth="<!--{ $infos.birth }-->" data-share="<!--{ $infos.birthShared }-->" data-info="<!--生日-->">
+	<span class="set_title"> 生日 </span>
+	<span class="set_entity"><!--{ $infos.birth_show }--> </span>
+	<span class="set_tool box_shower set_edit" data-parent=".set_birth" data-shower=".set_hide"> 编辑 </span>
+	<div class="set_state"><!--{ $infos.birthState }--></div>
+			
+	<div class="set_hide">
+		<input type="text" readonly="readonly" value="<!--{ $infos.birth_show }-->" placeholder="选择生日" 
+			class="btn select_time" data-type="2" id="birthday_texts" name="0" />
+	</div>
+	<div class="set_hide">
+		<span class="set_selector radio_selecter" data-parent=".set_birth" data-share="0" value="0"> 自己可见 </span>
+		<span class="set_selector radio_selecter" data-parent=".set_birth" data-share="1" value="1"> 好友可见 </span>
+		<span class="set_selector radio_selecter" data-parent=".set_birth" data-share="2" value="2"> 所有人可见 </span>
+		<span class="set_tool set_confirmC set_confirm" data-type="birth" data-parent=".set_birth"> 确认修改 </span>
+	</div>
+</div>
+
+<div class="set_row set_hometown <!--{ $infos.person_isset }--> _none" data-info="<!--家乡-->">
+	<span class="set_title"> 家乡 </span>
+	<span class="set_entity"> 黑龙江 - 佳木斯 </span>
+	<span class="set_tool box_shower" data-parent=".set_hometown" data-shower=".set_hide"> 编辑 </span>
+	<div class="set_state"><!--{ $infos.person.homeState }--></div>
+			
+	<div class="set_hide">
+		<input type="text" value="" placeholder="家乡" id="card_hometown" />
+	</div>
+	<div class="set_hide">
+		<span class="set_selector radio_selecter" data-parent=".set_hometown" data-type="0"> 自己可见 </span>
+		<span class="set_selector radio_selecter" data-parent=".set_hometown" data-type="1"> 好友可见 </span>
+		<span class="set_selector radio_selecter" data-parent=".set_hometown" data-type="2"> 所有人可见 </span>
+		<span class="set_tool set_confirmC set_confirm"> 确认修改 </span>
+	</div>
+</div>
+
+<div class="set_row set_present <!--{ $infos.person_isset }--> _none" data-info="<!--现居地-->">
+	<span class="set_title"> 现居地 </span>
+	<span class="set_entity"> 上海 - 虹口区 </span>
+	<span class="set_tool box_shower" data-parent=".set_present" data-shower=".set_hide"> 编辑 </span>
+			
+	<div class="set_hide">
+		<input type="text" value="" placeholder="现居地" id="card_present" />
+	</div>
+	<div class="set_hide">
+		<span class="set_selector radio_selecter" data-parent=".set_present" data-type="0"> 自己可见 </span>
+		<span class="set_selector radio_selecter" data-parent=".set_present" data-type="1"> 好友可见 </span>
+		<span class="set_selector radio_selecter" data-parent=".set_present" data-type="2"> 所有人可见 </span>
+		<span class="set_tool set_confirmC set_confirm"> 确认修改 </span>
+	</div>
+</div>
+	
+
+<div class="set_row set_school <!--{ $infos.person_isset }--> _none" data-info="<!--学校-->">
+	<div class="set_title"> 学校 </div>
+	<div class="set_entity"> 上海应用技术学院 - 计算机科技与技术 - 网络工程 </div>
+	<span class="set_tool box_shower set_edit" data-parent=".set_school" data-shower=".set_hide"> 编辑 </span>
+	<div class="set_state"><!--{ $infos.person.schoolState }--></div>
+			
+	<div class="set_hide"><input type="text" value="" placeholder="学校" class="input1" /></div>
+	<div class="set_hide"><input type="text" value="" placeholder="院系" class="input2" /></div>
+	<div class="set_hide"><input type="text" value="" placeholder="专业" class="input3" /></div>
+	<div class="set_hide">
+		<span class="set_selector radio_selecter" data-parent=".set_school" data-share="0"> 自己可见 </span>
+		<span class="set_selector radio_selecter" data-parent=".set_school" data-share="1"> 好友可见 </span>
+		<span class="set_selector radio_selecter" data-parent=".set_school" data-share="2"> 所有人可见 </span>
+		<span class="set_tool set_confirmC set_confirm"> 确认修改 </span>
+	</div>
+</div>
+
+
+	
+<div class="set_header"></div>
+<div class="set_row set_header">设置权限</div>
+	
+<div class="set_row set_timer" data-share="<!--{ $infos.timer }-->" data-info="<!--时刻-->">
+	<div class="set_title"> 时刻 </div>
+	<div class="set_entity"></div>
+	<span class="set_tool box_shower set_edit" data-parent=".set_timer" data-shower=".set_hide"> 编辑 </span>
+	<div class="set_state"><!--{ $infos.timerState }--></div>
+			
+	<div class="set_hide">
+		<span class="set_selector radio_selecter" data-parent=".set_timer" data-share="0"> 自己可见 </span>
+		<span class="set_selector radio_selecter" data-parent=".set_timer" data-share="1"> 好友可见 </span>
+		<span class="set_selector radio_selecter" data-parent=".set_timer" data-share="2"> 所有人可见 </span>
+		<span class="set_tool set_confirmC set_confirm" data-parent=".set_timer" data-type="timer"> 确认修改 </span>
+	</div>
+</div>
+	
+<div class="set_row set_note" data-share="<!--{ $infos.note }-->" data-info="<!--笔记-->">
+	<div class="set_title"> 笔记 </div>
+	<div class="set_entity"></div>
+	<span class="set_tool box_shower set_edit" data-parent=".set_note" data-shower=".set_hide"> 编辑 </span>
+	<div class="set_state"><!--{ $infos.noteState }--></div>
+			
+	<div class="set_hide">
+		<span class="set_selector radio_selecter" data-parent=".set_note" data-share="0"> 自己可见 </span>
+		<span class="set_selector radio_selecter" data-parent=".set_note" data-share="1"> 好友可见 </span>
+		<span class="set_selector radio_selecter" data-parent=".set_note" data-share="2"> 所有人可见 </span>
+		<span class="set_tool set_confirmC set_confirm" data-parent=".set_note" data-type="note"> 确认修改 </span>
+	</div>
+</div>
+	
+<div class="set_row set_ask" data-share="<!--{ $infos.ask }-->" data-info="<!--求助-->">
+	<div class="set_title"> 求助 </div>
+	<div class="set_entity"></div>
+	<span class="set_tool box_shower set_edit" data-parent=".set_ask" data-shower=".set_hide"> 编辑 </span>
+	<div class="set_state"><!--{ $infos.askState }--></div>
+			
+	<div class="set_hide">
+		<span class="set_selector radio_selecter" data-parent=".set_ask" data-share="0"> 自己可见 </span>
+		<span class="set_selector radio_selecter" data-parent=".set_ask" data-share="1"> 好友可见 </span>
+		<span class="set_selector radio_selecter" data-parent=".set_ask" data-share="2"> 所有人可见 </span>
+		<span class="set_tool set_confirmC set_confirm" data-parent=".set_ask" data-type="ask"> 确认修改 </span>
+	</div>
+</div>
+	
+<div class="set_row set_answer" data-share="<!--{ $infos.answer }-->" data-info="<!--帮助-->">
+	<div class="set_title"> 帮助 </div>
+	<div class="set_entity"></div>
+	<span class="set_tool box_shower set_edit" data-parent=".set_answer" data-shower=".set_hide"> 编辑 </span>
+	<div class="set_state"><!--{ $infos.askState }--></div>
+			
+	<div class="set_hide">
+		<span class="set_selector radio_selecter" data-parent=".set_answer" data-share="0"> 自己可见 </span>
+		<span class="set_selector radio_selecter" data-parent=".set_answer" data-share="1"> 好友可见 </span>
+		<span class="set_selector radio_selecter" data-parent=".set_answer" data-share="2"> 所有人可见 </span>
+		<span class="set_tool set_confirmC set_confirm" data-parent=".set_answer" data-type="answer"> 确认修改 </span>
+	</div>
+</div>
+		
+<div class="set_row set_collection" data-share="<!--{ $infos.collection }-->" data-info="<!--收藏-->">
+	<div class="set_title"> 收藏 </div>
+	<div class="set_entity"></div>
+	<span class="set_tool box_shower set_edit" data-parent=".set_collection" data-shower=".set_hide"> 编辑 </span>
+	<div class="set_state"><!--{ $infos.collectionState }--></div>
+			
+	<div class="set_hide">
+		<span class="set_selector radio_selecter" data-parent=".set_collection" data-share="0"> 自己可见 </span>
+		<span class="set_selector radio_selecter" data-parent=".set_collection" data-share="1"> 好友可见 </span>
+		<span class="set_selector radio_selecter" data-parent=".set_collection" data-share="2"> 所有人可见 </span>
+		<span class="set_tool set_confirmC set_confirm" data-parent=".set_collection" data-type="collection"> 确认修改 </span>
+	</div>
+</div>
+
+
+<div class="set_header"></div>
+
+

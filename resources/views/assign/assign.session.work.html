@@ -1,0 +1,57 @@
+<div class="session_work_ctn working-page session-working" id="" 
+	data-session="<!--{$session.session}-->" 
+	data-operate="<!--{$session.operate}-->" 
+	data-sort="<!--{$session.sort}-->" 
+	data-type="<!--{$session.type}-->"
+	data-belong="<!--{$session.belong}-->" 
+	data-item="<!--{$session.item}-->" 
+	
+	data-position="bottom"
+>
+	<span class="working-adder" data-object="0" data-reply=""></span>
+	
+	<div class="session_work_box session_work_header">
+			
+			<div class="session_work_portrait"><img src="./images/db<!--{$session.belong}-->/portrait.jpg?<!--{$session.random}-->"></div>
+			<div class="session_work_info">
+				<div class="session_row session_work_name">
+					<span class="btn-hover item _f16 _bold <!--{$session.item_isset}-->" data-belong="<!--{$session.belong}-->" data-item="<!--{$session.item}-->">
+						<!--{$session.name}-->.<!--{$session.item}-->
+					</span>
+					<span class="btn-hover item _f16 _bold <!--{$session.chat_isset}-->" data-belong="<!--{$session.belong}-->"><!--{$session.name}--></span>
+					<span class="btn-hover relation _f16 _bold <!--{$session.chat_isset}-->" data-belong="<!--{$session.belong}-->"><!--{$session.relation}--></span>
+					<span class="_f14"> <!--{$session.session_sort_name}--> </span>
+					<span class="btn-hover _f14 _cbbb session_content_show <!--{$session.content_isset}-->" data-status="hide"> 展开内容 </span>
+				</div>
+				<div class="session_row session_theme _f14 _bold <!--{$session.theme_isset}-->"><!--{$session.theme}--></div>
+				<div class="session_row session_content _f12 <!--{$session.content_isset}-->"><!--{$session.content}--></div>
+				<!--时间-->
+				<div class="session_row session_time <!--{$session.time_isset}-->" data-info="">
+			
+					<span class="item_btn timer  <!--{$session.timers.start_isset}-->" data-unix="<!--{$session.timers.start}-->" data-type="<!--{$session.timers.start_type}-->">
+							<!--{$session.timers.start_show}-->
+					</span>
+					<span class="item_btn _f12 <!--{$session.timers.ended_isset}--> "> 至 </span>
+					<span class="item_btn timer <!--{$session.timers.ended_isset}-->" data-unix="<!--{$session.timers.ended}-->" data-type="<!--{$session.timers.ended_type}-->"> 
+							<!--{$session.timers.ended_show}-->
+					</span>
+					<span class="item_btn timer <!--{$session.timers.remind_isset}-->" data-unix="<!--{$session.timers.remind}-->" data-type="<!--{$session.timers.remind_type}-->">
+							<!--{$session.timers.remind_show}-->
+					</span>
+		
+				</div>
+			</div>
+			<div class="btn-hover _f16 _bold session_tool session_work_hide _none"><span class=""> X </span></div>
+			
+	</div>
+	
+	<div class="session-work working-communication"><!--{include file="assign.communication.html"}--></div>
+	<div class="session-work working-content _none"><div class="session-content"><!--{$session.content}--></div></div>
+	
+	<div class="session_work_box session_work_footer">
+		<div class="session_work_input"><textarea class="working-input" placeholder=""></textarea></div>
+		<div class="btn-hover _c888 session_tool session-confirm session-adder" title="按Enter键发送，按Ctrl+Enter键换行"> 发送 </div>
+		<div class="btn-hover _c888 session_tool session-reset working-reset"> 清空 </div>
+	</div>
+	
+</div>

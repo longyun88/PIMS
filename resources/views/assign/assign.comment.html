@@ -1,0 +1,51 @@
+<!--{section loop=$data name="xs"}-->			
+<div class="comment-option" 
+	data-id="<!--{$data[xs].id}-->" 
+	data-sort="<!--{$data[xs].sort}-->" 
+	data-type="<!--{$data[xs].type}-->" 
+	data-item="<!--{$data[xs].itemId}-->"
+	data-source="<!--{$data[xs].sourceId}-->"
+	data-object="<!--{$data[xs].objectId}-->"
+	data-point="<!--{$data[xs].pointId}-->"
+	data-dialog="<!--{$data[xs].dialog}-->"
+	data-location="<!--{$data[xs].locationId}-->"
+	data-share="<!--{$data[xs].isShared}-->"
+>
+
+	<div class="comment-portrait _display721"><img src="./images/db<!--{$data[xs].source}-->/portrait.jpg" /></div>
+
+	<div class="comment-entity" value="<!--{$data[xs].Comment_posterId}-->">
+
+		<div class="comment-row">
+			<span class="link-btn _hover1 _bold  _left whos" data-whos="<!--{$data[xs].source}-->"><!--{$data[xs].posterName}--></span>
+			<span class="_grey1 _left <!--{$data[xs].object_isset}-->"> 回复 </span>
+			<span class="link-btn _hover1 _bold _left whos <!--{$data[xs].object_isset}-->" data-whos="<!--{$data[xs].object}-->"><!--{$data[xs].objectName}--></span>
+			<span class="_itext1 _f14 _bolds _left"><!--{$data[xs].header}--></span>
+			<span class="_itext1 _bold _left"><!--{$data[xs].tips}--></span>
+			<span class="_itext3 _f12 _grey1 _right timer _display721" value="<!--{$data[xs].time}-->"><!--{$data[xs].time_show}--></span>
+			<span class="item-btn _grey _left show_reply <!--{$data[xs].reply_isset}--> <!--{$data[xs].content_noset}-->" value="hide"> 回复 </span>
+		</div>
+
+		<div class="comment-row content <!--{$data[xs].content_isset}-->">
+			<!--{$data[xs].content}--> <span class="item-btn show_reply <!--{$data[xs].reply_isset}--> _none" value="hide"> 回复 </span>
+		</div>
+		
+		<div class="comment-row comment-reply comment_reply" value="hide" data-entity="<!--{$data[xt].entity}-->" data-object="0" >
+			<div class="comment-row item-input">
+				<textarea class="textarea-auto reply_text" placeholder="回复"></textarea>
+			</div>
+			<div class="comment-row">
+				<div class="radior_box _left reply_share" data-selected="0">
+					<span class="radior" data-parent="1" data-style="radior_selected" data-selected="0"> 悄悄话 </span>
+					<span class="radior" data-parent="1" data-style="radior_selected" data-selected="41"> 好友可见 </span>
+					<span class="radior default_click" data-parent="1" data-style="radior_selected" data-selected="100"> 所有人可见 </span>
+				</div>
+				<span class="item-btn _right btn_reply_cansel"> 取消 </span>
+				<span class="item-btn _right btn_reply" data-source="<!--{$data[xs].source}-->" > 回复 </span>
+			</div>
+		</div>
+		
+	</div>
+
+</div>
+<!--{/section}-->

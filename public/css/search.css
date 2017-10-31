@@ -1,0 +1,43 @@
+#request_fri
+{
+	position:fixed;
+	top:140px;
+	left:;
+	left:calc(50% - 180px);
+	left:-webkit-calc(50% - 180px);
+	left:-moz-calc(50% - 180px);
+	width:360px;
+	border:1px solid #aaa;
+	background:#fff;
+	z-index:120;
+}
+
+.person .person_show
+{
+	display:block;
+}
+
+.person_fri .person_fri_show
+{
+	display:block;
+}
+
+.person_request .person_request_show
+{
+	display:block;
+}
+
+
+
+
+
+
+.channel .channel_show
+{
+	display:block;
+}
+
+.channel_attn .channel_attn_show
+{
+	display:block;
+}

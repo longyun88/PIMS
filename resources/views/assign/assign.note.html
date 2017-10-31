@@ -1,0 +1,19 @@
+<!--{section loop=$data name="xt"}-->
+<div class="item_row module_piece" data-belong="<!--{$data[xt].belong}-->"  data-id="<!--{$data[xt].id}-->" >
+
+	<div class="item_row item_note_header note_tools">
+			<span class="little_btn _left _bold _blue_a item_details item <!--{$data[xt].rank_isset}-->" data-belong="<!--{$data[xt].belong}-->" data-entity="<!--{$data[xt].id}-->">
+				<!--{$data[xt].belong_name}-->.<!--{$data[xt].id}-->
+			</span>
+			<span class="little_btn _left _grey timer" data-timer="<!--{$data[xt].time}-->"><!--{$data[xt].time_show}--></span>
+			<span class="little_btn _left timer <!--{$data[xt].modified_isset}-->" data-unix="<!--{$data[xt].modified}-->">修改:<!--{$data[xt].modified_show}--></span>
+			<span class="little_btn _right btn_note_modify _grey"  data-type="note" data-tip="修改？"> 修改 </span>
+	</div>
+	
+	<div class="item_row content _bold <!--{$data[xt].theme_isset}-->"><!--{$data[xt].theme}--></div>
+	<div class="item_row content <!--{$data[xt].content_isset}-->"><!--{$data[xt].content}--></div>
+
+</div>
+<!--{sectionelse}-->
+	
+<!--{/section}-->

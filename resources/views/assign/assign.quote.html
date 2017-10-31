@@ -1,0 +1,71 @@
+<!--{section loop=$data name="xt"}-->
+<!--引用 Quote-->		
+<div class="item_row item_quote " data-info=""
+	data-identity="<!--{$data[xt].belongId}-->-<!--{$data[xt].id}-->"
+	
+	data-belong="<!--{$data[xt].belongId}-->"
+	data-id="<!--{$data[xt].id}-->"
+	data-sort="<!--{$data[xt].sort}-->"
+	
+	data-focused="<!--{$data[xt].focused}-->" 
+	data-collected="<!--{$data[xt].collected}-->"
+>
+			
+			<div class="item_row item_source <!--{$data[xt].belong_isset}-->">
+				<span class="btn _blue_a item" data-belong="<!--{$data[xt].belong}-->" data-entity="<!--{$data[xt].id}-->">
+					<!--{$data[xt].source_name}-->.<!--{$data[xt].id}-->
+				</span>
+			</div>
+			
+			<div class="item_row item_time <!--{$data[xt].time_isset}-->">
+	
+				<span class="timer timer_start <!--{$data[xt].timers.start_isset}-->" data-unix="<!--{$data[xt].timers.start}-->" data-type="<!--{$data[xt].timers.start_type}-->">
+						<!--{$data[xt].timers.start_show}-->
+				</span>
+				<span class="<!--{$data[xt].timers.ended_isset}--> c_grey">至</span>
+				<span class="timer timer_ended <!--{$data[xt].timers.ended_isset}-->" data-unix="<!--{$data[xt].timers.ended}-->" data-type="<!--{$data[xt].timers.ended_type}-->"> 
+						<!--{$data[xt].timers.ended_show}-->
+				</span>
+				<span class="timer remind_timer <!--{$data[xt].timers.remind_isset}--> <!--{$data[xt].timers.remind_ispast}-->" data-unix="<!--{$data[xt].timers.remind}-->" data-type="<!--{$data[xt].timers.remind_type}-->">
+						<!--{$data[xt].timers.remind_show}-->
+				</span>
+
+			</div>
+
+			<div class="item_row content item_theme <!--{$data[xt].theme_isset}-->"> <!--{$data[xt].theme}--> </div>
+			<div class="item_row content quote_content <!--{$data[xt].content_isset}-->"> <!--{$data[xt].content}--> </div>
+
+			<div class="item_row item_attaching <!--{$data[xt].attaching_isset}--> _none"></div>
+			<div class="item_row item_attachment <!--{$data[xt].attachment_isset}--> _none"></div>
+			
+			<div class="item_row quote_tools <!--{$data[xt].tools_isset}-->" 
+				data-quoteSource="<!--{$data[xt].source}-->" data-quoteId="<!--{$data[xt].id}-->"
+			>
+				<div class="_left">
+					<span class="tool_btn timer <!--{$data[xt].quote_timer_isset}-->" data-timer="<!--{$data[xt].time}-->"><!--{$data[xt].time_show}--></span>
+					<!--<span class="tool_btn details">详细</span>-->
+				</div>
+				<div class="_right">
+					<span class="little_btn btn_quote_comment"> 评论 <!--{$data[xt].comment}--> </span>
+					<span class="little_btn btn_confirm_forward"> 转发 <!--{$data[xt].forward}--> </span>
+					<span class="little_btn btn_confirm quote_operating <!--{$data[xt].collect_isset}-->" data-type="quote_collect" data-tip="确认收藏？">
+						收藏 <!--{$data[xt].collect}-->
+					</span>
+					<span class="little_btn btn_confirm quote_operating <!--{$data[xt].collect_cansel_isset}-->" data-type="quote_collect_cansel" data-tip="取消收藏？"> 
+						取消收藏 <!--{$data[xt].collect}--> 
+					</span>
+					<span class="little_btn btn_confirm quote_operating <!--{$data[xt].focus_isset}--> <!--{$data[xt].time_isset}-->" data-type="quote_focus" data-tip="确认关注？"> 
+						关注 <!--{$data[xt].focus}--> 
+					</span>
+					<span class="little_btn btn_confirm quote_operating <!--{$data[xt].focus_cansel_isset}--> <!--{$data[xt].time_isset}-->" data-type="quote_focus_cansel" data-tip="取消关注？"> 
+						取消关注 <!--{$data[xt].focus}--> 
+					</span>
+				</div>
+			</div>
+			
+</div>	
+<!--{sectionelse}-->
+
+<!--{/section}-->
+
+

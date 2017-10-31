@@ -1,0 +1,53 @@
+
+@font-face {
+	font-family:"weibofont";
+	src:url('http://live2.cc:9080/swbficon.woff') format('woff');
+	src:url('http://live2.cc:9080/wbficon.woff') format('woff');
+}
+.weibof {
+	font-family:"weibofont" !important;
+}
+
+@font-face {
+	font-family:"tfontx";
+	src:url('http://live2.cc:9080/tumblr-icons.woff2');
+}
+.tfont {
+	font-family:"tfontx" !important;
+	font-weight:bold;
+	content: "\EA4C";
+}
+.tfont:before {
+	content: "\EA4C";
+}
+
+@font-face {
+	font-family:"tfonts";
+	src:url('http://live2.cc:9080/Gibson-SemiBoldItalic-webfont.woff') format('woff');
+}
+.tfontx {
+	font-family:"tfonts" !important;
+}
+
+
+
+
+#container {
+    width: 40%;
+}
+.attr {
+	position:relative;
+	width: 32%;
+	height: 0;
+	padding-bottom: 32%;
+	margin-top:1%;
+	margin-right:1%;
+	background-color: #efefff;
+	float:left;
+	display:table-cell;
+	text-align:center;
+	vertical-align:middle;
+	overflow:hidden;
+}
+.attr img {width:100%; height:auto; margin:auto;
+}

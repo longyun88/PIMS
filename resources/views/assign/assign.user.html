@@ -1,0 +1,160 @@
+<!--{section loop=$users name="xt"}-->
+<div class="item-container <!--{$users[xt].user_type}-->" data-class="item_container <!--{$users[xt].user_type}-->" 
+	data-id="<!--{$users[xt].id}-->" 
+	data-db="<!--{$users[xt].db}-->" 
+>
+
+		<div class="item-portrait"><img src="./images/db<!--{$users[xt].id}-->/portrait.jpg?<!--{$users[xt].random}-->" /></div>
+
+	<div class="item-entity">
+
+
+		<!--主人-->	
+		<div class="item-row item_belong">
+			<span class="item_btn little_btn _left _f16 _bold whos" data-whos="<!--{$users[xt].id}-->"><!--{ $users[xt].name }--></span>
+			<span class="item_btn little_btn _left _f16 _bold" data-whos="<!--{$users[xt].id}-->">ID:<!--{ $users[xt].id }--></span>
+			<span class="relation"><!--{ $users[xt].relation }--></span>
+			
+			<div class="item_handle _right">
+				<span class="little_btn _right _grey boxes_shower" data-parent="3" data-shower="<!--{ $users[xt].shower }-->"> <!--{ $users[xt].operation_show }--> </span>
+			</div>
+		</div>
+		
+		<div class="item-row autograph <!--{ $users[xt].autograph_isset }-->">签名：<!--{ $users[xt].autograph }--></div>
+		
+		
+		<!--person-->	
+		<div  class="item-row 1 _none <!--{ $users[xt].person_isset }-->">
+			<div class="item-row <!--{ $users[xt].infos.birth_isset }-->"><!--{ $users[xt].infos.birth_show }--></div>
+			<div class="item-row <!--{ $users[xt].infos.hometown_isset }-->">家乡：<!--{ $users[xt].infos.hometown_show }--></div>
+			<div class="item-row <!--{ $users[xt].infos.present_isset }-->">现居地：<!--{ $users[xt].infos.present_show }--></div>
+			<div class="item-row <!--{ $users[xt].infos.school_isset }-->">
+				学校：<!--{ $users[xt].infos.school_show }-->
+			</div>
+			<div class="item-row <!--{ $users[xt].infos.company_isset }-->">
+				公司：<!--{ $users[xt].infos.company }--> - <!--{ $users[xt].infos.companyDepartment }--> - <!--{ $users[xt].infos.companyPosition }-->
+			</div>
+			<div class="item-row <!--{ $users[xt].infos.phone_isset }-->">phone：<!--{ $users[xt].infos.phone }--></div>
+			<div class="item-row <!--{ $users[xt].infos.email_isset }-->">email：<!--{ $users[xt].infos.email }--></div>
+		</div>
+		
+		<!--channel-->
+		<div  class="item-row 2 _none <!--{ $users[xt].channel_isset }-->">
+		</div>
+		
+		<div class="item-row _none"></div>
+		
+		<div class="item-row">
+			<span class="item_num">日程：<span class="_f14 _bold _green"> <!--{ $users[xt].item.timerNum }--> </span></span>
+		</div>
+		<div class="item-row">
+			<span class="item_num">笔记：<span class="_f14 _bold _green"> <!--{ $users[xt].item.noteNum }--> </span></span>
+		</div>
+		<div class="item-row">
+			<span class="item_num">求助：<span class="_f14 _bold _green"> <!--{ $users[xt].item.helpNum }--> </span></span>
+		</div>
+		<div class="item-row _none">
+			<span class="item_num">微博：<span class="_f14 _bold _green"> <!--{ $users[xt].item.wordsNum }--> </span></span>
+		</div>
+		<div class="item-row">
+			<span class="item_num">商品：<span class="_f14 _bold _green"> <!--{ $users[xt].item.goodsNum }--> </span></span>
+		</div>
+		
+		<div class="item-row _none"></div>
+		
+		
+		
+		<!--引用 Quote-->		
+		<div class="item-row item_quote <!--{$data[xt].quote_isset}--> _none" data-info="">
+			
+			<div class="item-row item_source <!--{$data[xt].quote.belong_isset}-->">
+				<span class="btn _blue_a item" data-belong="<!--{$data[xt].quote.source}-->" data-entity="<!--{$data[xt].quote.id}-->">
+					<!--{$data[xt].quote.source_name}-->.<!--{$data[xt].quote.id}-->
+				</span>
+			</div>
+			
+			<div class="item-row item_time <!--{$data[xt].quote.time_isset}-->">
+	
+				<span class="timer timer_start <!--{$data[xt].quote.start_isset}-->" data-unix="<!--{$data[xt].quote.start_unix}-->" data-type="<!--{$data[xt].quote.start_type}-->">
+					<!--{$data[xt].quote.start_show}-->
+				</span>
+				<span class="<!--{$data[xt].ended_isset}--> c_grey">至</span>
+				<span class="timer timer_ended <!--{$data[xt].quote.ended_isset}-->" data-unix="<!--{$data[xt].quote.ended_unix}-->" data-type="<!--{$data[xt].quote.ended_type}-->"> 
+					<!--{$data[xt].ended_show}-->
+				</span>
+
+				<span class="timer remind_timer <!--{$data[xt].quote.remind_isset}--> <!--{$data[xt].quote.remind_ispast}-->" data-unix="<!--{$data[xt].quote.remind_unix}-->" data-type="<!--{$data[xt].quote.remind_type}-->">
+					<!--{$data[xt].remind_show}-->
+				</span>
+
+			</div>
+
+			<div class="item-row content item_theme <!--{$data[xt].quote.theme_isset}-->"> <!--{$data[xt].quote.theme}--> </div>
+			<div class="item-row content quote_content <!--{$data[xt].quote.content_isset}-->"> <!--{$data[xt].quote.content}--> </div>
+
+			<div class="item-row item_attaching <!--{$data[xt].quote.attaching_isset}--> _none"></div>
+			<div class="item-row item_attachment <!--{$data[xt].quote.attachment_isset}--> _none"></div>
+			
+			<div class="item-row quote_tools <!--{$data[xt].quote.tools_isset}-->" 
+				data-quoteSource="<!--{$data[xt].quote.source}-->" data-quoteId="<!--{$data[xt].quote.id}-->"
+			>
+				<div class="_left">
+					<span class="tool_btn timer <!--{$data[xt].quote_timer_isset}-->" data-timer="<!--{$data[xt].quote.time}-->"><!--{$data[xt].quote.time_show}--></span>
+					<!--<span class="tool_btn details">详细</span>-->
+				</div>
+				<div class="_right">
+					<span class="little_btn btn_">评论</span>
+					<span class="little_btn btn_quote">转发<!--{$data[xt].quote.fwd}--></span>
+					<span class="little_btn btn_quote_collect <!--{$data[xt].quote.mine_isset}-->">收藏<!--{$data[xt].quote.fav}--></span>
+					<span class="little_btn btn_quote_focus <!--{$data[xt].quote.mine_isset}--> <!--{$data[xt].quote.time_isset}-->">关注<!--{$data[xt].quote.attn}--></span>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="item-row item_tools add_shower _none" data-info="">
+			<input type="text" value="" placeholder="附言" class="request_friend_ps" />
+		</div>
+		<div class="item-row item_tools add_shower _none">
+			<div class="item_handle">
+				<span class="little_btn handle_relations request_friend_confirm" data-id="<!--{$users[xt].id}-->" data-type="request_friend"> 发送 </span>
+			</div>
+			<div class="item_handle">
+				<span class="little_btn search_confirm_cansel">取消 </span>
+			</div>
+		</div>
+		
+		
+		<div class="item-row item_tools delete_shower _none" data-info="">
+			<div class="item_handle">
+				<span class="little_btn handle_relation" data-id="<!--{$users[xt].id}-->" data-type="delete_friend"> 解除关系 </span>
+			</div>
+			<div class="item_handle">
+				<span class="little_btn search_confirm_cansel">取消 </span>
+			</div>
+		</div>
+		
+		
+		<div class="item-row item_tools attention_shower _none" data-info="">
+			<div class="item_handle">
+				<span class="little_btn handle_relation" data-id="<!--{$users[xt].id}-->" data-type="attention_it"> 确认关注 </span>
+			</div>
+			<div class="item_handle">
+				<span class="little_btn search_confirm_cansel">取消 </span>
+			</div>
+		</div>
+		
+		
+		<div class="item-row item_tools cansel_shower _none" data-info="">
+			<div class="item_handle">
+				<span class="little_btn handle_relation" data-id="<!--{$users[xt].id}-->" data-type="attention_cansel"> 取消关注 </span>
+			</div>
+			<div class="item_handle">
+				<span class="little_btn search_confirm_cansel">取消 </span>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+<!--{/section}-->

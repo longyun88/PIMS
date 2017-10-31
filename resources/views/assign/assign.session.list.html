@@ -1,0 +1,36 @@
+<!--{section loop=$data name="xt"}-->
+<div class="_pointer _piece  selector cilckerback set_backer_session session-ctrl <!--{$data[xt].controller}-->" id="session-<!--{$data[xt].ctrl}-->" data-checked="0" 
+	data-update="init"
+	 data-id="<!--{$data[xt].id}-->" 
+	 data-sort="<!--{$data[xt].sort}-->" 
+	 data-type="<!--{$data[xt].type}-->" 
+	 data-belong="<!--{$data[xt].belong}-->" 
+	 data-item="<!--{$data[xt].item}-->" 
+	 data-workingId="<!--{$data[xt].ctrl}-->"
+	 data-ctrl="<!--{$data[xt].ctrl}-->"
+	 data-session_type="<!--{$data[xt].session_type}-->"
+	data-selector=".session-ctrl" 
+	data-selected="selected_2" 
+	data-cilckerback="#session_session" 
+>
+	
+	<span class="p-leftop1 _box1 _f12 _bold _cfff _bgred _alert session-alert <!--{$data[xt].unread_isset}-->"> <!--{$data[xt].unreadNum}--> </span>
+
+	<div class="btn-hover piece-portrait whoss" data-whos="<!--{$data[xt].belong}-->" title="进入TA的主页">
+		<img src="./images/db<!--{$data[xt].belong}-->/portrait.jpg?<!--{$data[xt].random}-->">
+	</div>
+	
+	<div class="piece-entity">
+		<div class="piece-row piece-top session-top"><span class="_f14 _bold session-title"> <!--{$data[xt].header}--> </span></div>
+		<div class="piece-row piece-bottom session-bottom"><span class="_f14 session-theme"><!--{$data[xt].theme}--></span></div>
+	</div>
+	
+	<div class="piece-tools">
+		<span class="piece-tool session_close _f16 _bold"> X </span>
+	</div>
+
+</div>
+<!--{/section}-->
+
+
+
