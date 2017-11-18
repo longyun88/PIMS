@@ -12,8 +12,8 @@ return [
      |
      */
 
-//    'enabled' => env('DEBUGBAR_ENABLED', null),
-    'enabled' => env('APP_DEBUG', true),
+//    'enabled' => env('APP_DEBUG', true),
+    'enabled' => env('DEBUGBAR_ENABLED', true),
 
     /*
      |--------------------------------------------------------------------------

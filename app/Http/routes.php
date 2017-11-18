@@ -12,6 +12,12 @@
 */
 
 
+Route::get('/homeindex', function() {
+    return view('home.index');
+});
+
+
+
 Route::get('mail/sendReminderEmail','MailController@sendReminderEmail');
 
 Route::get('socket', 'SocketController@index');
@@ -277,43 +283,7 @@ Route::get('/testProgram/{type?}', 'TestController@testProgram');
 	
 
 	
-	
-	
-	Route::get('/sqlsx', function() // 集合操作
-	{
-			
-			$arr = ['one','two','three'];
-			$collection = collect($arr);
-			$r = $collection->take(2); // 取值
-			$r = $collection->take(-2); // 取值
-			return $r;
 
-
-//			$arr = ['one'=>'a','two'=>2,'three'=>3];
-//			$collection = collect($arr);
-//			$r = $collection->has(1);// 有没有键
-//			return $r ? '有' : '没有';
-			
-			
-//			$arr = ['one','two','three'];
-//			$collection = collect($arr);
-//			$r = $collection->contains('one'); // 有没有值
-//			return $r ? '有' : '没有';
-			
-			//return $collection->all(); // 输出原型
-			
-			//dd($collection); // 显示集合
-			
-			
-			
-			//$user = new App\User();
-			//$users = $user->all();
-			//dd($users);
-			//return $users->all(); // 返回原型
-			//$users->toArray();
-			
-			//return $user->userRead();
-	});
 	
 	Route::any('/les17', function() // 会话
 	{
